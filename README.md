@@ -5,12 +5,12 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/lazyoracle/optim-benchmark/master)
 
-- [Overview](#overview)
-- [Usage](#usage)
+* [Overview](#overview)
+* [Usage](#usage)
   * [Run Experiment](#run-experiment)
   * [Visualising Results](#visualising-results)
-- [Optimisation Algorithms & Benchmark Functions](#optimisation-algorithms---benchmark-functions)
-- [Results](#results)
+* [Optimisation Algorithms & Benchmark Functions](#optimisation-algorithms---benchmark-functions)
+* [Results](#results)
   * [Easy](#easy)
   * [Hard](#hard)
   * [Number of Evaluations to a Goal](#number-of-evaluations-to-a-goal)
@@ -86,7 +86,7 @@ fig_test = plot_regular(exp_df, filter_func, use_tex, plot_evals = eval_budget, 
 
 ## Optimisation Algorithms & Benchmark Functions
 
-The algorithm and some of the benchmark function implementations are taken from. While the code should work with all algorithms listed in `nevergrad`, we specifically look at the following here:
+The algorithm and some of the benchmark function implementations are taken from `nevergrad`. While the code should work with all algorithms listed in `nevergrad`, we specifically look at the following here:
 
 * CMA
 * Random Search
