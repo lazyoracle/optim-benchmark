@@ -21,6 +21,54 @@ pip install -r requirements.txt
 jupyter lab --port 4242 demo_notebook.ipynb
 ```
 
+### Run Experiment
+
+There are two steps to running an experiment:
+
+* Defining experiment conditions
+* Invoking the code to parse conditions and run experiment
+
+Here's an example:
+
+```python
+algo_list = ['CMA', 'NoisyBandit', 'NoisyOnePlusOne', 'PSO',
+             'RandomSearch', 'SPSA', 'TBPSA']
+func_list = ['rosenbrock', 'sphere4', 'rastrigin', 'griewank', 'deceptivepath']
+dim_list = [2, 3, 5, 8]
+eps_list = [0.5, 0.10, 0.05, 0.03, 0.02, 0.01, 0]
+log_list = [False]
+EVAL_BUDGET = 1000
+#CREATE A NEW FILE IF CHANGING THE NUMBER OF EVALUATIONS
+saved_file = "results-low-dim.pkl" #File to read from where previous expts were stored
+                            # or new file to write to
+save_interval = 600
+initials = [0.0, 5.0, -5.0, 23.46, -23.46]
+
+run_exp(algo_list, func_list, dim_list, eps_list, log_list, EVAL_BUDGET, saved_file, 'pkl', initials, save_interval)
+```
+
+### Visualising Results
+
+Generating plots from the current experiment or previously run experiments is also straightforward.
+
+```python
+exp_df = pd.read_pickle('results-low-dim.pkl')
+
+stripped_expt_df = exp_df.drop(columns = ['exp_data', 'min_params', 'f_min', 'time'])
+results_summary(stripped_expt_df)
+
+eval_budget = 1000
+filter_func = lambda z: ((z['func'] in ['rastrigin']) and
+                     (z['dim'] == 5) and
+                     (z['log'] in [False]) and
+                     (z['algo'] in ['CMA', 'NoisyBandit', 'NoisyOnePlusOne', 'PSO',
+                                     'RandomSearch', 'SPSA', 'TBPSA']) and
+                     (z['starter'] in [5.0]) and  
+                     (z['noise_level'] in [0.03]))
+use_tex = False
+fig_test = plot_regular(exp_df, filter_func, use_tex, plot_evals = eval_budget, y_field = 'f_min', logplot='y')
+```
+
 ## Optimisation Algorithms & Benchmark Functions
 
 The algorithm and some of the benchmark function implementations are taken from. While the code should work with all algorithms listed in `nevergrad`, we specifically look at the following here:
