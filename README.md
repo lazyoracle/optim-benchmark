@@ -55,14 +55,14 @@ This is a visual representation of what the landscape of these functions typical
 
 ## Results
 
-We group the combined effects of function landscape, noise and dimensions into *Easy*, *Medium*, *Medium-Hard* and *Hard* and study the minimisation of the funtion as the algorithm progresses with more function evaluations. The code is also designed to study the number of evaluations that would be required to reach a specific `f_min` goal. 
+We group the combined effects of function landscape, noise and dimensions into *Easy*, *Medium*, *Medium-Hard* and *Hard* and study the minimisation of the funtion as the algorithm progresses with more function evaluations. The code is also designed to study the number of evaluations that would be required to reach a specific `f_min` goal.
 
 Some preliminary results can be seen below:
 
 ### Easy
 
 > * Convex (translated sphere)
-> * noise 0.03 
+> * noise 0.03
 > * dimension 3
 > * X: log-scale evaluations
 > * Y: log-scale goal
