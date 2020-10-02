@@ -101,20 +101,27 @@ The algorithm and some of the benchmark function implementations are taken from 
 * Bayesian Optimisation
 * Estimation of Distribution
 
-We test the above algorithms on the following synthetic functions:
+We test the above algorithms on the following synthetic functions (with a visual representation of the function landscape):
 
-* Translated Sphere
+### Translated Sphere
+
 ![Plot of Translated Sphere](img/Picture1.png)
-* Rosenbrock
-![Plot of Rosenbrock](img/Picture2.png)
-* Ill-Conditioned
-![Plot of Ill-Conditioned Function](img/Picture3.png)
-* Multimodal
-![Plot of Multi-Modal Function](img/Picture4.png)
-* Path-Function
-![Plot of Path Function](img/Picture5.png)
 
-This is a visual representation of what the landscape of these functions typically look like:
+### Rosenbrock
+
+![Plot of Rosenbrock](img/Picture2.png)
+
+### Ill-Conditioned
+
+![Plot of Ill-Conditioned Function](img/Picture3.png)
+
+### Multimodal
+
+![Plot of Multi-Modal Function](img/Picture4.png)
+
+### Path-Function
+
+![Plot of Path Function](img/Picture5.png)
 
 ## Results
 
