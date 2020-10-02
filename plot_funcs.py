@@ -2,7 +2,6 @@
 """
 Created on Tue Jul  9 20:08:48 2019
 
-@author: anura
 """
 from benchmark_functions import *
 from mpl_toolkits import mplot3d
