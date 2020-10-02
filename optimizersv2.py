@@ -1,13 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Wed Mar 13 21:50:16 2019
-
-@author: anurag
-
-Quick hack to check dataset format
-
-"""
-
 from nevergrad.optimization import optimizerlib
 from benchmark_functions import REGISTRY_OF_FUNCS as func_registry
 from nevergrad.optimization import registry as algo_registry
