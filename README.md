@@ -5,6 +5,16 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/lazyoracle/optim-benchmark/master)
 
+- [Overview](#overview)
+- [Usage](#usage)
+  * [Run Experiment](#run-experiment)
+  * [Visualising Results](#visualising-results)
+- [Optimisation Algorithms & Benchmark Functions](#optimisation-algorithms---benchmark-functions)
+- [Results](#results)
+  * [Easy](#easy)
+  * [Hard](#hard)
+  * [Number of Evaluations to a Goal](#number-of-evaluations-to-a-goal)
+
 ## Overview
 
 This repository benchmarks various gradient-free (black-box) optimisers on synthetic functions. Specifically, we look at the following variables when considering standard benchmark functions:
