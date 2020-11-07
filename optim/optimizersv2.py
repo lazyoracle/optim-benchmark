@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from nevergrad.optimization import optimizerlib
-from benchmark_functions import REGISTRY_OF_FUNCS as func_registry
+from .benchmark_functions import REGISTRY_OF_FUNCS as func_registry
 from nevergrad.optimization import registry as algo_registry
 import random
 import math
@@ -15,7 +15,6 @@ import sys
 from contextlib import redirect_stdout
 from functools import reduce
 from cycler import cycler
-
 
 #Setting plot params
 
@@ -583,7 +582,3 @@ def merge_exp(list_of_exp_df):
     merged_df.index = index
     return merged_df
     
-
-
-if __name__ == "__main__":
-    run_exp()
